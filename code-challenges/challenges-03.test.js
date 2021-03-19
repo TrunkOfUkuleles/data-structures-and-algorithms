@@ -228,7 +228,7 @@ Run your tests from the console: jest challenges-03.test.js
 ------------------------------------------------------------------------------------------------ */
 
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should return an array of uppercase animal names', () => {
     const arr = ['BeAr', 'lIon'];
     expect(updateAnimal(arr, upper)[0]).toStrictEqual('BEAR');
@@ -241,7 +241,7 @@ xdescribe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return an array of names sorted alphabetically', () => {
     expect(sortNames(['able', 'Bob'])[0]).toStrictEqual('Bob');
   });
@@ -264,7 +264,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should sort strings alphabetically', () => {
     expect(alphabetize(['alphabet', 'Zebra', 'Alphabet', 'carrot'])).toStrictEqual([ 'Alphabet', 'Zebra', 'alphabet', 'carrot']);
     expect(alphabetize(['alphabet','Alphabet', 'carrot'])).toStrictEqual([ 'Alphabet', 'alphabet', 'carrot']);
@@ -292,7 +292,7 @@ describe('Testing challenge 7', () => {
   });
 });
 
-describe('Testing challenge 8', () => {
+xdescribe('Testing challenge 8', () => {
   test('It should sort items by their price', () => {
     expect(sortByPrice([
       {name: 'Sweatshirt', price: 45},
