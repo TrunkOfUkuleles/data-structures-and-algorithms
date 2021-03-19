@@ -54,7 +54,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 
 const sortNumbers = (arr) => {
   // Solution code here...
-  return arr.sort((a,b) => parseInt(a) - parseInt(b))
+  return arr.sort((a,b) => parseInt(a) > parseInt(b))
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 
 const sortBackwards = (arr) => {
   // Solution code here...
-  return arr.sort((a,b) => {return parseInt(a) < parseInt(b)})
+  return arr.sort((a,b) => parseInt(a) < parseInt(b))
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,12 +97,10 @@ Here is an example of the input:
   {name: 'Tote bag', price: 15}
 ];
 ------------------------------------------------------------------------------------------------ */
-
+//code for question #8 (tests switched?)
 const sortByPrice = (arr) => {
   // Solution code here...
-  return arr.sort((a,b) => {
-   return  a.prce > b.price ? 1 : -1
-  })
+  return arr.sort((a,b) => a.length > b.length)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,7 +114,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 const alphabetizeBetter = (arr) => {
   // Solution code here...
   return arr.sort((a,b) => {
-    return a.toLowerCase < b.toLowerCase ? -1: 1
+    return a.toUpperCase() < b.toUpperCase() ? -1: 1
   })
 };
 
@@ -125,9 +123,10 @@ CHALLENGE 8 - Stretch Goal
 
 Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------ */
-
+//code for #6 (tests switched?)
 const sortByLength = (arr) => {
   // Solution code here...
+  return arr.sort((a,b) => Number(a.prce) < Number(b.price) )
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -293,7 +292,7 @@ describe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should sort items by their price', () => {
     expect(sortByPrice([
       {name: 'Sweatshirt', price: 45},
