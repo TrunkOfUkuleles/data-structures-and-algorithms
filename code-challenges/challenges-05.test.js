@@ -133,16 +133,11 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let noo = ['sized', 'pounds', 'gallons', 'cups', 'pound',1,2,3,4,5,6,7,8,9,0]
-  let bad = new RegExp(noo.join('|'))
+  let noo = 'pounds|cups|\d|sized|gallons|pound|medium'
   let result = [];
   let step = recipe.ingredients.slice()
   step.map( a => {
-    let rez = []
-    for (let i= 0; (bad.test(a[step.length-i-1])) !== true ; i++ ){
-      rez.push(a[step.length-i-1])
-    }
-    return rez.reverse().join('')
+    result.push(a.filter(noo))
   })
   
   // Solution code here...
