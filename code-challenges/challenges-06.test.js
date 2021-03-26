@@ -56,7 +56,11 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
-  return charArray.sort((a, b) => {a.children.length < b.children.length ? 1 : -1})
+ return charArray.sort((a,b) => {
+   if (a.children.length === b.children.length){a.house>b.house ? 1 : -1}
+   a.children.length>b.children.length ? 1 : -1
+ })
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -86,7 +90,7 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
-  return Object.values(obj).contains(value)
+  return Object.values(obj).includes(value)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -111,9 +115,12 @@ HR has asked you to change the data to make it easier to print so that it looks 
 const updateNumbers = (obj) => {
   // Solution code here...
   const result =[]
+  let o = Object.keys(obj)
+  let b = Object.values(obj)
   for (let i=0;i<Object.keys(obj).length;i++){
-    result.push(`${Object.keys(obj)[i]}: ${Object.values(obj)[i]}`)
+    result.push(`${o[i]}: ${b[i]}`)
   }
+  return result
 };
 
 
@@ -127,8 +134,8 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  arr.map((el) =>{houses.push(el.house)})
-
+  arr.forEach((el) => houses.push(el.house))
+  
   return houses;
 };
 
@@ -146,9 +153,9 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  let track = arr.filter(ob => ob.character == character)
-  return track.children
-
+  let result = false
+  arr.forEach(el => {(el.name === character && el.children.length !== 0) ? result=true : ''})
+  return result
 };
 
 /* ------------------------------------------------------------------------------------------------
