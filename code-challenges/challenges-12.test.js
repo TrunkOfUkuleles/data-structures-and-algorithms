@@ -10,6 +10,7 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
+  return arr.reduce((acc, curr) =>{if (curr > acc){return curr} else{return acc}}, 0)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,7 +29,11 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
-};
+  let max = 0
+matrix.forEach(el => {
+  el.map((ell) => {ell>max ? max =ell : max=max}) 
+})
+return max;};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -46,6 +51,7 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+   return matrix.reduce((acc, curr)=>{return acc + curr.reduce((a,b)=>{return a+b}, 0)},0)
 };
 
 
@@ -73,7 +79,13 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-
+  let result = [0,0,0,0,0,0,0,0,0,0,0,0]
+  stores.forEach(el => {
+    for (let i = 0 ; i< result.length ; i++){
+      result[i] = result[i]+el[i]
+    }
+  })
+  return result
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -88,6 +100,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let result = []
+  for (let i = 0 ; i < data.length; i++){
+    result.push({sales: data[i] + " cookies", time: hours[i]})
+  }
+  return result
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,7 +130,16 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
-};
+  let count = 0
+  let test = arr.slice()
+  for (let i = 0 ; i< test.length; i++){
+    for (let j = 0; j< 3 ; i++){
+      if (test[i][1][j].name === 'Treats'){count += test[i][1][j].quantity}
+    }
+  }
+  return count
+  }
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
