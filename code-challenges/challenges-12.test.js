@@ -130,14 +130,14 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
-  let count = 0
-  let test = arr.slice()
-  for (let i = 0 ; i< test.length; i++){
-    for (let j = 0; j< 3 ; i++){
-      if (test[i][1][j].name === 'Treats'){count += test[i][1][j].quantity}
-    }
-  }
-  return count
+
+
+  return arr.reduce((acc,curr) => {
+  let treat = 0
+   curr.items.forEach(el => el.name==='Treats' ? treat = treat + el.quantity : '')
+  return acc + treat
+  }, 0)
+
   }
 
 

@@ -59,6 +59,7 @@ const containsWorld = (input) => {
   return res.test(input)
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -70,8 +71,13 @@ Return an array containing all the matches.
 const isCapitalized = (str) => {
   // Solution code here...
   const res = /[A-Z]/g
-  const ser = /[^,)]/mg
-  return str.split('').filter(el => ser.test(el)).join('').filter(el => res.test(el))
+  const ser = /[^,)0-9]/g
+  // let step = str.split(' ').fiter(el=> res.test(el[0])).join(' '). split('').filter(el=>ser.test(el)).join('');
+  // console.log(step)
+  // return step
+  let step =  str.split('').filter(el => ser.test(el)).join('').split(' ').filter(el => {if (res.test(el[0])) {return el} })
+  console.log(step)
+  return step.filter(kell => kell.length>1)
 
 };
 

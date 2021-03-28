@@ -130,14 +130,23 @@ const gruffaloCrumble = {
     'Bake for 12-15 hours',
   ]
 };
-
+//next find index of second space
 
 const listFoods = (recipe) => {
-  let noo = 'pounds|cups|\d|sized|gallons|pound|medium'
+  let noo = 'pounds|cups|\d|sized|gallons|pound|medium|- '
   let result = [];
-  let step = recipe.ingredients.slice()
+  let step = recipe.ingredients
   step.map( a => {
-    result.push(a.filter(noo))
+    let idx=0
+    let indx=0
+    for (const c in a){
+      if (c===' '){
+      idx = idx + 1}
+
+      if(idx===2){
+        indx = a.indexOf(c)}
+    }
+    result.push(a.slice(indx))
   })
   
   // Solution code here...
