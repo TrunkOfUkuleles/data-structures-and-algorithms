@@ -69,7 +69,8 @@ const standardizePhoneNumbers = (arr) => {
   //   result.push(temp)
   // })
   // return result
-    let test = arr.filter(el=>{el = el.replace(/\D/mg,'')})
+    let test = arr
+    test.forEach(el=> el.replace(/\D/mg,''))
     console.log('test: ', test)
     return test
 
