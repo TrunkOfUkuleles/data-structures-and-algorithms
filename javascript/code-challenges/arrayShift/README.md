@@ -2,6 +2,13 @@
 
 ## Julien Edwards
 
+# Challenge Summary
+without using built in methods relating to the task at hand, accept an array, and a number, and return an array with that number in the middle index of the array
+
+## Challenge Description
+Work on our ability to utilize vanilla javascript to solve problems a variety of ways. Sometimes you have to be flexible
+
+## Approach & Efficiency
 
 Began the process sketching out my general idea. Most of the timeI assumed all built in methods meant any .<x> methods. 
 So originally I had a for loop to hget the length, then used a for loop to iterate and make a new array. I allowed myself
@@ -19,6 +26,7 @@ the .length method, but the rest remained pretty vanilla. Testing I could not ge
 
 ## time to complete: finsihed basic logic in an hour, but spent the rest of the time working on the tests
 
+## Solution
 
 ![board 1](./assets/IMG_5762.jpg)
 
