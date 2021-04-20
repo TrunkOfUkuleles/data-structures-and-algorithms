@@ -82,7 +82,12 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-  return arr.sort()
+  let caap=/[A-Z]/
+  const track={cap:[], ncap:[]}
+  arr.forEach((curr)=>{caap.test(curr[0]) ?  track.cap.push(curr) :  track.ncap.push(curr)})
+  let result2=[...track.cap.sort(), ...track.ncap.sort()]
+  console.log(result2)
+  return result2
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -100,7 +105,7 @@ Here is an example of the input:
 //code for question #8 (tests switched?)
 const sortByPrice = (arr) => {
   // Solution code here...
-  return arr.sort((a,b) => a.length - b.length)
+  return arr.sort((a,b) => a.length > b.length)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,7 +131,7 @@ Write a function named sortByLength that takes in an array of strings and return
 //code for #6 (tests switched?)
 const sortByLength = (arr) => {
   // Solution code here...
-  return arr.sort((a,b) => parseInt(a.prce) - parseInt(b.price) )
+  return arr.sort((a,b) => a.length - b.length)
 };
 
 /* ------------------------------------------------------------------------------------------------
