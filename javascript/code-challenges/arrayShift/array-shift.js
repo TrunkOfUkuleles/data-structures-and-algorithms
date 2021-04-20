@@ -20,12 +20,12 @@ function insertShiftArray (arr, num) {
         result[j + 1] = arr[j];
       }
       //return new array
-      return result;
+      break;
     } else {
       result[i] = arr[i];
-      console.log("hup: ", arr[i], result[i]);
     }
   }
+  return result;
 }
 console.log(insertShiftArray(arr, inp));
 
@@ -42,10 +42,9 @@ function deleteShiftArray (arr, num) {
       for (let j = i; j < arr.length; j++) {
         result[j - 1] = arr[j];
       }
-      return result;
+      return [result];
     } else {
       result[i] = arr[i];
-      console.log("hup: ", arr[i], result[i]);
     }
   }
 }
