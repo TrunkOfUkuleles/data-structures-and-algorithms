@@ -17,3 +17,6 @@ I approached the problem recursively. I set an initial L/R, and used those as th
 ![Whiteboard]{./assets/IMG_5765.jpg}
 
 ![Scribbles]{./assets/IMG_5764.jpg}
+
+
+[CODE](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/blob/array-binary-search/javascript/code-challenges/arrayBinarySearch/array-binary-search.js)
