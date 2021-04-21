@@ -8,49 +8,64 @@ test3 = []
 
 function binarySearch(arr, el){
 
-    if (el > arr[arr.length+1] || el<arr[0]){return -1}
+    if (el > arr[arr.length-1] || el<arr[0]){return -1}
 
-    let left = 0
-    let right = arr.length + 1
-
+    let leftPos = 0
+    let rightPos = arr.length - 1
+    let midPos = Math.floor(rightPos/2)
     let result = -1
 
-    function innerSearch(array, el,  left, right, mid=Math.floor(arr.length/2)){
-        if (array[mid] === el) {
-            result = mid
+    function innerSearch(array, ele,  left, right, middle){
+        //quick check
+        if (array[middle] === ele) {
+            result = middle
+
+            return 
+        }
+        if (array[left] === ele){
+          result = left
+          return 
+        }
+        if (array[right] === ele){
+          result = right
+          return 
+        }
+        //err
+        if (middle === left || middle === right || middle - 1 < left || middle + 1 > right || left > right){
+
             return;
         }
-        if (mid === left || mid === right || mid-1 < left || mid+1 > right || left > right){
-            return;
-        }
 
 
 
-        if (arr[mid] > el){
-            right = mid-1
-            middle = left + Math.floor((right - left)/2) 
-            return innerSearch(arr, el, left, right, middle )
-        }
-        if (arr[mid] < el){
-            left = mid+1
-            middle = left + Math.floor((right - left)/2) 
-            return innerSearch(arr, el, left, right, middle )
+        if (array[middle] > ele) {
+
+            let newRight = middle - 1
+            let newMiddle = left + Math.floor((newRight - left) / 2) 
+            return innerSearch(arr, ele, left, newRight, newMiddle)
+        } 
+
+        if (arr[middle] < ele){
+
+            let newLeft = middle + 1
+            let newMiddle = newLeft + Math.floor((right - newLeft)/2) 
+            return innerSearch(arr, ele, newLeft, right, newMiddle )
         }
         
-        
+        console.log("end?")
     }
-    
+    innerSearch(arr, el, leftPos, rightPos, midPos)
     return result
 
 }
 
 //happy PATH
-console.log(binarySearch(test1, 8))
-console.log(binarySearch(test2, 6))
-console.log(binarySearch(test2, 47))
+console.log("A", binarySearch(test1, 8)) //exp 8
+console.log("B", binarySearch(test2, 6)) // exp 2
 
 // bad PATH
-console.log(binarySearch(test1, 15))
+console.log("C", binarySearch(test2, 47)) //exp -1    VVV
+console.log("D", binarySearch(test1, 15))
 
 //edge
-console.log(binarySearch(test3, 7))
+console.log("E", binarySearch(test3, 7))
