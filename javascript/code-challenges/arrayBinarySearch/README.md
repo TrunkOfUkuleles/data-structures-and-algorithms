@@ -14,4 +14,6 @@ I approached the problem recursively. I set an initial L/R, and used those as th
 ## Solution
 <!-- Embedded whiteboard image -->
 
-![]{./assets/.jpg}
+![Whiteboard]{./assets/IMG_5765.jpg}
+
+![Scribbles]{./assets/IMG_5764.jpg}
