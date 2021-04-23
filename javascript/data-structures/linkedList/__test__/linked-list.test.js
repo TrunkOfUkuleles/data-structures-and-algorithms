@@ -18,7 +18,7 @@ describe("Linked List Test", () => {
         expect(list.head.value).toEqual(1);
 
         list.append(second);
-        expect()
+        expect(list.head.next.value). toEqual(2)
         
     })
 
