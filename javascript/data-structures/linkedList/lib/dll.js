@@ -1,8 +1,8 @@
 'use strict';
 
-const Node = require('./node.js')
+const Node = require('./node2.js')
 
-class LinkedList {
+class DoublyLinkedList {
     constructor(){
         this.head = null;
     }
@@ -15,9 +15,11 @@ class LinkedList {
           this.head = node;
       }else{
           let curr = this.head;
-          while(curr.next){
+          while(curr.next){ 
             curr = curr.next;
+
           }
+          node.prev = curr 
           curr.next = node
       }
       return this
@@ -28,7 +30,8 @@ class LinkedList {
         let node = new Node(value)
         
         let curr = this.head;
-        node.next = curr
+        node.next = curr;
+        node.next.prev = node;
         this.head = node
         
         return this
@@ -47,16 +50,17 @@ class LinkedList {
       
 
       toString(){
-          let result = "";
+          let result = ""
           let curr = this.head;
           while(curr){
-            result += `{ ${curr.value} } -> `;
+            result += `{ ${curr.value} } -> `
             if (curr.next === null){ result += `NULL`}
+            
                curr = curr.next;
           }
-          return result;
+          return result
       }
 
 }
 
-module.exports = LinkedList;
+module.exports = DoublyLinkedList;
