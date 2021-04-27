@@ -111,6 +111,20 @@ class LinkedList {
         }
 
       }
+
+      nthFromEnd(n){
+
+        let track = [];
+        let curr = this.head;
+          while(curr){
+            track.unshift(curr.value)
+            console.log(track)
+            curr = curr.next;
+          }
+        if (n!==0 && track.length < n){return null}
+        return track[n]
+
+      }
       
 
 }
