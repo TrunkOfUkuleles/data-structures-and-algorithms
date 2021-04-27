@@ -121,7 +121,7 @@ class LinkedList {
             console.log(track)
             curr = curr.next;
           }
-        if (n!==0 && track.length < n){return null}
+        if ((n!==0 && track.length <= n) || n<0 ){return null}
         return track[n]
 
       }
