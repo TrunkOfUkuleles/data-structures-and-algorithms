@@ -1,7 +1,7 @@
 # Singly Linked List
 <!-- Short summary or background information -->
 
-create a functional single linked list. adding functionality to add, delete and insert notes to the list
+create a functional single linked list. adding functionality to add, delete and insert notes to the list. can also find nth from the end
 
 ## Challenge
 <!-- Description of the challenge -->
@@ -20,9 +20,11 @@ create the ability to make a linked list, add to the head or tail, can check for
 .insertBefore: this.pointer = this.head.next, this.prev ...  if this.pointer.value = value {this.newNode.next = curr, this.prev.next = newNode } else{this.prev = this.curr, this.curr = this.curr.next}
 .insertAfter: this.pointer = this.head.next ...  if this.pointer.value = value {this.newNode.next = curr.next, this.pointer.next = this.newNode}   else{this.prev = this.curr, this.curr = this.curr.next}
 .delete this.pointer = this.head.next ...  if this.pointer.next.value = value{this.pointer.next = this.pointer.next.next}
+.nthFromEnd: this.pointer = this.head.next ...{count.upshift(cur.value)}... return count[n]
 
 
 ![whiteboard]{./assets/CCDA05.jpg}
 ![whiteboard-inserts]{./assets/CCDA06.jpg}
+![nthFromTheEnd-whiteboard]{./assets/CCDA07.jpg}
 
-[CODE](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/blob/array-binary-search/javascript/data-structures/linkedList/index.js)
+[CODE](https://https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/ll-kth-from-end) 
