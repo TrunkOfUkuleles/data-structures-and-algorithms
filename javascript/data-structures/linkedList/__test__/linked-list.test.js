@@ -136,4 +136,54 @@ describe("Linked List Test", () => {
         expect(list.head.next.value).toEqual(44);
     })
 
+    it('Can locate the value of nodes nth from the tail of the LL', () => {
+        let nthList = new LL();
+        let first = 1;
+        let second = 2;
+        let fourth = 44;
+        nthList.append(first);
+        nthList.append(second);
+        nthList.append(fourth);
+        let testing = nthList.nthFromEnd(0);
+        expect(testing).toEqual(44);
+        let testing2 = nthList.nthFromEnd(2);
+        expect(testing2).toEqual(1);
+    })
+
+    it('Can run the edge cases', () => {
+        let edgeList = new LL();
+        let first = 1;
+        let second = 2;
+        let fourth = 44;
+        edgeList.append(first);
+        edgeList.append(second);
+        edgeList.append(fourth);
+        let testing = edgeList.nthFromEnd(6);
+        expect(testing).toEqual(null);
+
+        let testing2 = edgeList.nthFromEnd(2);
+        expect(testing2).toEqual(1);
+
+        let testing3 = edgeList.nthFromEnd(-1);
+        expect(testing3).toEqual(null);
+
+        let newLL = new LL();
+        newLL.append(2);
+        let one = newLL.nthFromEnd(1);
+        expect(one).toEqual(null);
+
+        newLL.append(3);
+        newLL.append(4);
+        newLL.append(67);
+        newLL.append(7);
+        newLL.append(35);
+
+        let middle = newLL.nthFromEnd(3);
+        expect(middle).toEqual(4)
+
+
+        
+
+    })
+
 })
