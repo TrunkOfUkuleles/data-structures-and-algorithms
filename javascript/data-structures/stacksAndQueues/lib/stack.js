@@ -31,14 +31,12 @@ class Stack {
     }
 
     peek(){
-        let newNode = new Node(value);
         let result;
         if (!this.top) {
-            return console.error("womp");
+            return "EMPTY";
         }else{
-            result = this.top.next.value
+        return this.top.next.value
         }
-            return result
     }
 
     isEmpty(){

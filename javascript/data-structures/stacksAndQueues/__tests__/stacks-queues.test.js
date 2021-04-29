@@ -20,10 +20,10 @@ describe("Stacks and Queues Testing", () => {
         expect(list.top.value).toEqual(1);
 
         list.push(second);
-        expect(list.top.next.value). toEqual(2);
+        expect(list.top.value). toEqual(2);
 
         list.push(third);
-        expect(list.top.next.next.value).toEqual(3);
+        expect(list.top.value).toEqual(3);
         
     })
 
@@ -113,7 +113,7 @@ describe("Stacks and Queues Testing", () => {
         expect(list.front.value).toEqual(1);
 
         list.enqueue(second);
-        expect(list.front.value). toEqual(2);
+        expect(list.front). toEqual(1);
 
         list.dequeue();
         expect(list.front.value). toEqual(1);

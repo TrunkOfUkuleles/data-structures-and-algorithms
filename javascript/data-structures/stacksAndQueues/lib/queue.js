@@ -6,7 +6,7 @@ const Node = require('./node.js')
 class Queue {
     constructor(value){
         this.front = null,
-        this.back = null
+
     }
 
     enqueue(value){
