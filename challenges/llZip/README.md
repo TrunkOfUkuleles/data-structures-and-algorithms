@@ -9,7 +9,12 @@ write functions to combine two linked list, alternating
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-I wanted to just get it working wit ha simple flag. a while loop has the current traversing right behind nodes being made. by flagging I switch which list I am drawing from. 
+I wanted to just get it working with a simple flag. a while loop has the current traversing right behind nodes being made. by flagging I switch which list I am drawing from. 
 
 ## Solution
 <!-- Embedded whiteboard image -->
+
+
+![starting-logic]("./assets/ll-zip-logic.jpg")
+
+[REPO](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/ll-zip)
