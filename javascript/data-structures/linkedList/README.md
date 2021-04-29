@@ -23,8 +23,8 @@ create the ability to make a linked list, add to the head or tail, can check for
 .nthFromEnd: this.pointer = this.head.next ...{count.upshift(cur.value)}... return count[n]
 
 
-![whiteboard]{./assets/CCDA05.jpg}
-![whiteboard-inserts]{./assets/CCDA06.jpg}
-![nthFromTheEnd-whiteboard]{./assets/CCDA07.jpg}
+![whiteboard](./assets/CCDA05.jpg)
+![whiteboard-inserts](./assets/CCDA06.jpg)
+![nthFromTheEnd-whiteboard](./assets/CCDA07.jpg)
 
 [CODE](https://https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/ll-kth-from-end) 
