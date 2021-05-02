@@ -1,12 +1,12 @@
 'use strict';
 
 const Stack = require('../lib/stack.js')
-const Queue = require('../lib/queue.js')
+const Queue = require('../lib/queue.js');
 
 describe("Stacks and Queues Testing", () => {
     it('can make an empty stack', () => {
         let list = new Stack();
-        expect(list.top).toEqual(null);
+        expect(list.length).toEqual(0);
 
     })
 
@@ -17,13 +17,13 @@ describe("Stacks and Queues Testing", () => {
         let third = 3;
 
         list.push(first);
-        expect(list.top.value).toEqual(1);
+        expect(list[list.length]).toEqual('1');
 
         list.push(second);
-        expect(list.top.value). toEqual(2);
+        expect(list[list.length]). toEqual('2');
 
         list.push(third);
-        expect(list.top.value).toEqual(3);
+        expect(list[list.length]).toEqual('3');
         
     })
 
@@ -33,13 +33,13 @@ describe("Stacks and Queues Testing", () => {
         let second = 2;
 
         list.push(first);
-        expect(list.top.value).toEqual(1);
+        expect(list[list.length]).toEqual(1);
 
         list.push(second);
-        expect(list.top.value). toEqual(2);
+        expect(list[list.length]). toEqual(2);
 
         list.pop();
-        expect(list.top.value). toEqual(1);
+        expect(list[list.length]). toEqual(1);
         
     })
 
@@ -58,12 +58,12 @@ describe("Stacks and Queues Testing", () => {
         list.pop();
         list.pop();
         list.pop();
-        expect(list.top.value). toEqual(1);
+        expect(list[list.length]). toEqual(1);
         list.pop();
-        expect(list.top). toEqual(null);
+        expect(list.length). toEqual(0);
     })
 
-    it('Can peek into the next value on the stack', () => {
+    it('Can peek into the top of the stack', () => {
         let list = new Stack();
         let first = 1;
         let second = 2;
@@ -73,8 +73,7 @@ describe("Stacks and Queues Testing", () => {
         list.push(second);
         list.push(fourth);
         let peeker = list.peek()
-        expect(peeker).toEqual(2);
-        expect(list.top).toEqual(1)
+        expect(peeker).toEqual(4);
         
     })
 
@@ -83,7 +82,7 @@ describe("Stacks and Queues Testing", () => {
 
     it('can make an empty queue', () => {
         let list = new Queue();
-        expect(list.front).toEqual(null);
+        expect(list.length).toEqual(null);
 
     })
 
@@ -94,29 +93,30 @@ describe("Stacks and Queues Testing", () => {
         let third = 3;
 
         list.enqueue(first);
-        expect(list.front.value).toEqual(1);
+        expect(list[0]).toEqual(1);
 
         list.enqueue(second);
-        expect(list.front.next.value). toEqual(2);
+        expect(list[1]). toEqual(2);
 
         list.enqueue(third);
-        expect(list.front.next.next.value).toEqual(3);
+        expect(list[2]).toEqual(3);
         
     })
 
-    it('Can properly pop off of the queue', () => {
+    it('Can properly dequeue the queue', () => {
         let list = new Queue();
         let first = 1;
         let second = 2;
 
         list.enqueue(first);
-        expect(list.front.value).toEqual(1);
+        expect(list[list.next]).toEqual(1);
 
         list.enqueue(second);
-        expect(list.front). toEqual(1);
+        expect(list[list.next]). toEqual(1);
 
         list.dequeue();
-        expect(list.front.value). toEqual(1);
+        expect(list.next). toEqual(1);
+        expect(list[list.next]). toEqual(1);
         
     })
 
@@ -135,12 +135,12 @@ describe("Stacks and Queues Testing", () => {
         list.dequeue();
         list.dequeue();
         list.dequeue();
-        expect(list.front.value). toEqual(1);
+        expect(list[list.length]). toEqual(1);
         list.dequeue();
-        expect(list.front). toEqual(null);
+        expect(list[list.length]). toEqual(null);
     })
 
-    it('Can peek into the next value on the queue', () => {
+    it('Can peek at the next value on the queue', () => {
         let list = new Queue();
         let first = 1;
         let second = 2;
@@ -150,8 +150,8 @@ describe("Stacks and Queues Testing", () => {
         list.enqueue(second);
         list.enqueue(fourth);
         let peeker = list.peek()
-        expect(peeker).toEqual(2);
-        expect(listenerCount.front).toEqual(1)
+        expect(peeker).toEqual(1);
+        expect(list.length).toEqual(3)
         
     })
 })

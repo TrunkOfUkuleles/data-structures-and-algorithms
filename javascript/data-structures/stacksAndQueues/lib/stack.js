@@ -5,43 +5,54 @@ const Node = require('./node.js')
 
 class Stack {
     constructor(){
-        this.top = null;
+        this.length = 0;
     }
 
     push(value){
-    let newNode = new Node(value);
-    if (!this.top) {
-        this.top = newNode;
-    }else{
-        newNode.next = this.top;
-        this.top = newNode;
-    }
-        return this
+        this[this.length++] = value;
+        return this[(this.length - 1)]
     }
 
     pop(){
-        let result;
-        if (!this.top) {
-            return console.error("womp");
-        }else{
-            result = this.top.value
-            this.top = this.top.next;
-        }
-            return result
+    if (this.length===0){return 'empty stack'}
+    let result = this[--this.length];
+    delete this[this.length]
+    return result
     }
 
     peek(){
-        let result;
-        if (!this.top) {
-            return "EMPTY";
-        }else{
-        return this.top.next.value
-        }
+        return this[this.length-1]
     }
 
     isEmpty(){
-        this.top.value ? true : false
+        return this.length === 0
     }
 }
 
 module.exports = Stack;
+
+
+// =========
+
+// function Stack() {
+//     this.length = 0
+// }
+
+// Stack.prototype.push = function (val){
+//     this[this.length++] = val
+//     return this
+// }
+
+// Stack.prototype.pop = function (val){
+//     if (this.length===0){return 'empty stack'}
+//     let result = this[--this.length];
+//     delete[this.length]
+// }
+
+// Stack.prototype.peek = function (val){
+    //     return this[this.length-1]
+    // }
+
+    // Stack.prototype.isEmpty = function (val){
+    //     return this.length === 0
+    // }
