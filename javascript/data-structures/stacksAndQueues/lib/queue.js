@@ -1,10 +1,8 @@
 'use strict';
 
-const { isNull } = require("node:util");
-
 class Queue {
 
-    constrcuctor(){
+    constructor(){
         this.length = 0,
         this.next = null
     }
@@ -17,14 +15,20 @@ class Queue {
 
     dequeue(){
         let result = this[this.next]
+
         this.next++
-        delete this[(this.next - 1)]
+
+
+        delete this[this.next-1]
+
+
         this.length--
-        console.log(this.length, this.next)
+
+
         return result
         }
      peek(){
-         console.log(this[this.next])
+         if (this.next===null || this.next === -1){return 'Empty'}
         return this[this.next]
         }
 

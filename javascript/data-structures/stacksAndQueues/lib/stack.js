@@ -9,8 +9,9 @@ class Stack {
     }
 
     push(value){
-        this[this.length++] = value;
-        return this[(this.length - 1)]
+        this[this.length] = value;
+        this.length++
+        return this
     }
 
     pop(){
