@@ -11,7 +11,7 @@ describe("Stacks and Queues Testing", () => {
 
     })
 
-    it('can push values onto the stack', () => {
+    it('can enqueue values into the stacks', () => {
         let push = new PseudoQueue();
 
         push.enqueue(1);
@@ -24,6 +24,8 @@ describe("Stacks and Queues Testing", () => {
 
         push.enqueue(3);
         expect(push.stack1.length).toEqual(3)
+        expect(push.stack1.peek()).toEqual(3)
+        console.log("PUSH TEST: ", push.stack1, push.stack2)
         
     })
 
@@ -38,6 +40,8 @@ describe("Stacks and Queues Testing", () => {
 
         deq.dequeue();
         expect(deq.next1). toEqual(1);
+
+        console.log("DEQ TEST: ", deq.stack1, deq.stack2)
         
     })
 })
