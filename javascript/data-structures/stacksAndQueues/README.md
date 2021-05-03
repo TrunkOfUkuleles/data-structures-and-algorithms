@@ -22,6 +22,6 @@ Queue:
 - dequeue => Q{length:2, next:0, 0:pushed, 1:pushedagain} => Q{length:1, next:1, 1:pushedagain}
 - peel => Q[Q.next]
 
-![whiteboard]{./assets/CCDA05.jpg}
+![whiteboard]{./assets/SAQ01.jpg}
 
-[CODE]() 
+[CODE](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/stack-and-queue/javascript/data-structures/stacksAndQueues) 
