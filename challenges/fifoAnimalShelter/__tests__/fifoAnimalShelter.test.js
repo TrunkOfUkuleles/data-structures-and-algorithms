@@ -1,6 +1,5 @@
 'use strict';
 
-const { listenerCount } = require('node:events');
 const AnimalShelter = require('../lib/fifo-animal-shelter.js')
 
 describe("Stacks and Queues Testing", () => {
@@ -13,7 +12,7 @@ describe("Stacks and Queues Testing", () => {
     }
 
            let Shelter = new AnimalShelter();
-    it('can make an empty Queue with 2 stacks', () => {=
+    it('can make an empty Queue with 2 stacks', () => {
         expect(Shelter.dogs).toBeDefined();
         expect(Shelter.cats).toBeDefined();
 
