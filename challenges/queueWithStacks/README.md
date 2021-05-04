@@ -15,7 +15,7 @@ starting wit hthe stack class I mocked up what I wanted it to look like on my bo
 ## Solution
 <!-- Embedded whiteboard image -->
 
-
-![starting-logic]("./assets/ll-zip-logic.jpg")
+![steps 1]('./assets/queuestacks1.jpg')
+![steps 2]('./assets/queuestacks2.jpg')
 
 [REPO](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/queue-with-stacks)
