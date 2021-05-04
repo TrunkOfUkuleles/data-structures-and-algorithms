@@ -32,16 +32,16 @@ describe("Stacks and Queues Testing", () => {
 
     it('Can dequeue animals out of the shelter', () => {
 
-       let adopt1 = Shelter.dequeu('dog');
-       let adopt2 = Shelter.dequeu('dog');
+       let adopt1 = Shelter.dequeue('dog');
+       let adopt2 = Shelter.dequeue('dog');
        expect(Shelter.dogs.length).toEqual(1);
        expect(adopt1.name).toBe('steve');
        expect(adopt2.name).toBe('meatbone');
-       let adopt3 = Shelter.dequeu('cat');
+       let adopt3 = Shelter.dequeue('cat');
        expect(Shelter.cats.length).toEqual(1);
        expect(adopt3.name).toBe('casey');
 
-       let faker = Shelter.dequeu();
+       let faker = Shelter.dequeue();
        expect(faker).toBe(null);
         
     })
