@@ -16,6 +16,15 @@ class AnimalShelter{
     }
 
     dequeue(type){
+        // if (!type){
+        //     let cat = this.cats.peek()
+        //     let dog = this.dogs.peek()
+        //     console.log(cat, dog)
+
+        //     dates.compare(cat.time, dog.time)
+        //     ? this.dogs.dequeue()
+        //     : this.cats.dequeue()
+        // }
         if (type === 'cat'){return this.cats.dequeue()}
         if(type === 'dog'){return this.dogs.dequeue()}
         return null

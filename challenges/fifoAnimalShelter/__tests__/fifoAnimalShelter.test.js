@@ -45,4 +45,12 @@ describe("Stacks and Queues Testing", () => {
        expect(faker).toBe(null);
         
     })
+
+
+    // it('Can return the oldest pet from the shelter', ()=>{
+
+    //     let oldHat = Shelter.dequeue()
+    //     expect(oldHat.name).toBe('dolly')
+
+    // })
 })
