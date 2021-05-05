@@ -1,4 +1,8 @@
 'use strict';
+
+// const Node = require('./node.js')
+
+
 class Stack {
     constructor(){
         this.length = 0;
