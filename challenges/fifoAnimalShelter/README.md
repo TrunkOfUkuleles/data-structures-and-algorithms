@@ -11,4 +11,4 @@ starting with the Queue system we built the other day, I created a new class tha
  
 Upon enqueue and dequeue, check opbject animal type, then queue accordingly. 
 
-![basic-animal-logic]('./assets/animalQlogic.jpg')
+![basic-animal-logic](./assets/animalQlogic.jpg)
