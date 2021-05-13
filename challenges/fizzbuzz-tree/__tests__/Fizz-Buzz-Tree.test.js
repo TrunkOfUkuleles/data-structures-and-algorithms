@@ -4,8 +4,8 @@
 const Node = require('../node.js')
 const kTree = require('../fizz-buzz-tree.js');
 
-describe("Stacks and Queues Testing", () => {
-    it('can make an empty Binary Tree', () => {
+describe("K-Tree FizzBuzz testing", () => {
+    it('can make an empty K Tree', () => {
         let list = new kTree();
         expect(list.root).toBeDefined();
 
