@@ -11,17 +11,17 @@ describe("Stacks and Queues Testing", () => {
 
     })
 
-    let one = new Node(44)
-    one.left = new Node(4)
-    one.right = new Node(666)
+    let one = new Node(15)
+    one.children.push(new Node(4)) 
+    one.children.push(new Node(666))
     let brock = new kTree(one)
-    const body= {value: 10, left:{value: 7, left:null, right:{value: 44 , left: null, right: null}}, right:{value: 33, left: null, right: null}}
+    const body= {value: 10, children:[{value: 7, children:[{value: 44, children:[]}]}, {value: 33, children:[]}]}
     let mock = new kTree(body)
 
  
     it('can return a Fizzed/Buzzed version of the tree', () => {
-        expect(mock.FizzBuzzTree()).toEqual({root: {value: 'Buzz', left:{value: 7, left:null, right:{value:44 , left:null, right:null}}, right:{value:"Fizz" , left:null, right:null}}});
-        expect(brock.FizzBuzzTree()).toEqual({value: 44, left:{value: 4, left:null, right:null}, right:{value:"Fizz" , left:null, right:null}});
+        expect(mock.FizzBuzzTree()).toEqual({root: {value: "Buzz", children:[{value: 7, children:[{value: 44, children:[]}]}, {value: "Fizz", children:[]}]}});
+        expect(brock.FizzBuzzTree()).toEqual({root: {value: "FizzBuzz", children:[{value: 4, children:[]}, {value: "Fizz", children:[]}]}});
     })
 
 

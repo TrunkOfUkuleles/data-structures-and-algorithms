@@ -1,18 +1,18 @@
 # Challenge Summary
 <!-- Short summary or background information -->
-add on tree work from last class wityh a new function
+work on k tree and make a function to fizzify a tree
 
 ## Challenge Description
 <!-- Description of the challenge -->
-    extend the class to include a method that will search through and return the largest value held withion that tree.
+    build function that returns a k tree copy where the values that are divisible by 3 and 5 get fizzbuzzed, etc., etc.
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-I went wit hthe standard preorder traversal and held a tracer to return for the largest seen. This is o(n) and is just fine. If I wanted to be better about that, I might have a tracker that ammends the largest when nodes are added
+I ended up making a copy of the tree, then useed recursion to walk through applying a callback function to filter values as needed
 
 ## Solution
 <!-- Embedded whiteboard image -->
 
-![steps]('./assets/maxTree.jpg')
+![steps](./assets/UML.jpg)
 
 
-[REPO](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/find-maximum-binary-tree)
+[REPO](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/FizzBuzzTree)
