@@ -13,3 +13,5 @@
 [fifo-animal-shelter](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/ll-zip/challenges/fifo-animal-shelter)
 
 [insertion-sort](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/insertionSort/challenges/insertionSort)
+
+[merge-sort](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/insertionSort/challenges/insertionSort)
