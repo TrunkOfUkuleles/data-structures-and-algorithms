@@ -17,7 +17,7 @@ describe("Insertion Sort Testing", () => {
         // let result = mergeSort(test1)
         // let resalt = mergeSort(test2)
         // let resolt = mergeSort(test3)
-        let wesult = quickSort(realTest, 0, arr.length-1)
+        let wesult = quickSort(realTest, 0, realTest.length-1)
         
         // expect(result).toEqual([-2,5,8,12,18,20]);
         // expect(resalt).toEqual([5,5,5,7,7,12]);
