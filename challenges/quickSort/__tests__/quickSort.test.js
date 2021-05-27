@@ -2,7 +2,7 @@
 
 'use strict';
 
-const mergeSort = require('../mergeSort.js'); 
+const quickSort = require('../quickSort.js'); 
 
 describe("Insertion Sort Testing", () => {
 
