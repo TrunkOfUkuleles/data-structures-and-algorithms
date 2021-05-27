@@ -1,0 +1,15 @@
+{
+  "name": "quickSort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "quickSort.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.0.1"
+  }
+}
