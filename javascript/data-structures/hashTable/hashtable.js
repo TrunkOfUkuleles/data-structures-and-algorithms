@@ -87,6 +87,8 @@ class linkedList {
   
     }
 
+    module.exports = HashMap
+
     let testing = new HashMap(5);
 
     testing.set('julien', 'edwards');
