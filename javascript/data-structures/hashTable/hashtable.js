@@ -26,6 +26,16 @@ class linkedList {
 
       }
     }
+
+    contains(val){
+      if (!this.head) return 'no list';
+      let current = this.head;
+      while(current){
+        if (current[0] === val){return true}
+        current = current.next
+      }
+      return false
+    }
   
     getList() {
       if (!this.head) return 'no list';
@@ -76,7 +86,7 @@ class linkedList {
 
       get(key){
           if (!this.storage[this.hash(key)]){return "Not Found"}
-        return this.storage[this.hash(key)]
+        return this.storage[this.hash(key)].contains(key)
       }
 
       contains(key){
