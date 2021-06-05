@@ -11,3 +11,5 @@ array-shift: ./javascript/code-challenges/arrayShift  or [Github](https://github
 arrayBinarySearch: [Github](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/tree/array-binary-search/javascript/code-challenges/arrayBinarySearch)
 
 linkedList: [Github](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/blob/array-binary-search/javascript/data-structures/linkedList/index.js)
+
+hashTable: [Github](https://github.com/TrunkOfUkuleles/data-structures-and-algorithms/blob/array-binary-search/javascript/data-structures/hashTable/index.js)
