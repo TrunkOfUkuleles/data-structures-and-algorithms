@@ -31,7 +31,7 @@ class linkedList {
       if (!this.head) return 'no list';
       let current = this.head;
       while(current){
-        if (current[0] === val){return true}
+        if (current.value[0] === val){return true}
         current = current.next
       }
       return false
@@ -48,6 +48,15 @@ class linkedList {
       }
     //   console.log(result)
       return result
+    }
+
+    get(val){
+      if (!this.head) return 'no list';
+      let current = this.head;
+      while(current){
+        if (current.value[0] === val){return current.value}
+        current = current.next;
+      }
     }
   }
 
@@ -86,28 +95,29 @@ class linkedList {
 
       get(key){
           if (!this.storage[this.hash(key)]){return "Not Found"}
-        return this.storage[this.hash(key)].contains(key)
+        return this.storage[this.hash(key)].get(key)
       }
 
       contains(key){
         let hashed = this.hash(key)
-
-        return this.storage[hashed] !== undefined
+        if (!this.storage[hashed]){return false}
+        let check = this.storage[hashed]
+        return check.contains(key)
       }
   
     }
 
     module.exports = HashMap
 
-    let testing = new HashMap(5);
+    // let testing = new HashMap(5);
 
-    testing.set('julien', 'edwards');
-    testing.set('jjjmcool', 'edwards');
-    testing.set('fergie', 'edwards');
-    testing.set('whatsa', 'edwards');
-    testing.set('pon', 'edwards');
-    testing.set('julien', 'bedwards');
-    // console.log(testing)
-    console.log(testing.print())
-    console.log(testing.get('eeee'))
-    console.log(testing.contains('ergie'))
+    // testing.set('julien', 'edwards');
+    // testing.set('jjjmcool', 'edwards');
+    // testing.set('fergie', 'edwards');
+    // testing.set('whatsa', 'edwards');
+    // testing.set('pon', 'edwards');
+    // testing.set('julien', 'bedwards');
+    // // console.log(testing)
+    // console.log(testing.print())
+    // console.log(testing.get('eeee'))
+    // console.log(testing.contains('ergie'))
