@@ -30,7 +30,7 @@ describe("Hash Table Testing", () => {
     it('can get a LL from the table without collision', () => {
         expect(testSet.get('julien')).toBeDefined();
         expect(testSet.get('pon')).toBeDefined();
-        expect(testSet.get('pon').head.value).toEqual(['pon', 'edwards'])
+        expect(testSet.get('pon')).toEqual(['pon', 'edwards'])
 
         expect(testSet.get('please steppyy')).toEqual("Not Found")
 
